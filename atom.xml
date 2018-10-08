@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>波波|博客</title>
+  <title>波波的博客</title>
   
   <subtitle>梦想是要有的</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-08T03:10:09.944Z</updated>
+  <updated>2018-10-08T05:36:09.671Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,35 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/10/08/%E5%A4%87%E7%94%A8/cao/"/>
-    <id>http://yoursite.com/2018/10/08/备用/cao/</id>
-    <published>2018-10-08T03:09:35.791Z</published>
-    <updated>2018-10-08T03:10:09.944Z</updated>
-    
-    <content type="html"><![CDATA[<p>## </p><ol><li>hexo</li><li>hexo</li><li>hexo</li><li>hexo</li><li>hexo</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;## &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;hexo&lt;/li&gt;
-&lt;li&gt;hexo&lt;/li&gt;
-&lt;li&gt;hexo&lt;/li&gt;
-&lt;li&gt;hexo&lt;/li&gt;
-&lt;li&gt;hexo&lt;/li&gt;
-&lt;/ol&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>hexo</title>
@@ -59,27 +30,6 @@
       
       
         &lt;h3 id=&quot;第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈&quot;&gt;&lt;a href=&quot;#第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈&quot; class=&quot;h
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/09/30/%E5%A4%87%E7%94%A8/hello-world/"/>
-    <id>http://yoursite.com/2018/09/30/备用/hello-world/</id>
-    <published>2018-09-30T07:49:53.920Z</published>
-    <updated>2018-10-08T03:04:58.723Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;hexo&quot;&gt;&lt;a href=&quot;#hexo&quot; class=&quot;headerlink&quot; title=&quot;hexo&quot;&gt;&lt;/a&gt;hexo&lt;/h2&gt;
       
     
     </summary>
