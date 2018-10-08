@@ -173,62 +173,10 @@
       
         <h3 id="第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈"><a href="#第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈" class="headerlink" title="第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈"></a>第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈</h3><p>我相信有好多人都会卡在安装hexo这里把</p>
 <h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官方下载地址</a></li>
-</ul>
-<h4 id="设置npm淘宝镜像"><a href="#设置npm淘宝镜像" class="headerlink" title="设置npm淘宝镜像"></a>设置npm淘宝镜像</h4><p>npm config set registry “<a href="https://registry.npm.taobao.org&quot;" target="_blank" rel="noopener">https://registry.npm.taobao.org&quot;</a></p>
-<h4 id="创建博客库"><a href="#创建博客库" class="headerlink" title="创建博客库"></a>创建博客库</h4><ul>
-<li>注意，仓库名应该为：用户名.github.io。比如，我的仓库名是：<strong>xuezhisd.github.io</strong>。</li>
-</ul>
-<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><ul>
-<li><a href="https://git-scm.com/downloads/" target="_blank" rel="noopener">git下载地址</a></li>
-</ul>
-<h4 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h4><ul>
-<li><p>打开git bash终端。</p>
-</li>
-<li><p>设置user.name和user.email。</p>
-<p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”</p>
-</li>
-<li><p>生成ssh密匙</p>
-<p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</p>
-</li>
-<li><p><strong>此时，在用户文件夹下就会有一个新的文件夹.ssh，里面有刚刚创建的ssh密钥文件id_rsa和id_rsa.pub。</strong></p>
-</li>
-</ul>
-<h3 id="开始安装hexo咯。。。"><a href="#开始安装hexo咯。。。" class="headerlink" title="开始安装hexo咯。。。"></a>开始安装hexo咯。。。</h3><p>执行以下命令安装hexo</p>
-<p>安装hexo</p>
-<p>npm install hexo-cli g</p>
-<p>初始化博客文件夹</p>
-<p>hexo init blog</p>
-<p>切换到该路径</p>
-<p>cd blog</p>
-<p>安装hexo的扩展插件</p>
-<p>npm install</p>
-<p>安装其它插件</p>
-<p>npm install hexo-server –save<br>npm install hexo-admin –save<br>npm install hexo-generator-archive –save<br>npm install hexo-generator-feed –save<br>npm install hexo-generator-search –save<br>npm install hexo-generator-tag –save<br>npm install hexo-deployer-git –save<br>npm install hexo-generator-sitemap –save</p>
-<p>（具体安装这些是干嘛用的小编也不清楚，反正安装就对了）</p>
-<p>安装好了可以先测试一下，hexo是否安装成功了（我就在这卡了许久。。。下面我会把我的错误也给大家分享）</p>
-<p>测试一下：hexo -v</p>
-<p><img src="C:\Users\Refueling\Desktop\20181008095014.png" alt="">这便是安装成功了</p>
-<p>如果你的hexo报错了。提示：‘hexo’不是内部或外部命令，也不是可运行的程序或批处理文件。</p>
-<p>（八成是也是和我同样的错了，应该小白大概都会遇到的错把！！！）</p>
-<p>1首先配置一下hexo的环境变量</p>
-<p><img src="C:\Users\Refueling\Desktop\20181008095709.png" alt=""></p>
-<p>这是我的路径，你也去找一下你的配置一下</p>
-<p>因为默认的找不到你的hexo.cmd文件</p>
-<p>下面就OK 啦。你的是否出现了所期望的呢</p>
-<h2 id="初探hexo"><a href="#初探hexo" class="headerlink" title="初探hexo"></a>初探hexo</h2><ul>
-<li><p>第一次使用hexo，在本地创建服务器使用。</p>
-<p>生成静态页面</p>
-<p>hexo generate</p>
-<p>开启本地服务器</p>
-<p>hexo s</p>
-</li>
-<li><p>打开浏览器，地址栏中输入：<strong><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></strong>,应该可以看见刚刚创建的博客了。</p>
-</li>
-</ul>
-<p>本人邮箱：<a href="mailto:RefuelingBo@outlook.com" target="_blank" rel="noopener">RefuelingBo@outlook.com</a></p>
-<p>有问题我们可以私聊，共同进步</p>
-
+<li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官方下载地址</a></p>
+        
+          <a class="article-more-a" href="/2018/10/08/caozhengbo-BK/#more">more >></a>
+        
       
 
       
@@ -241,6 +189,93 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/10/08/caozhengbo-BK/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-cao-hexo-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/08/31/cao-hexo-2/">Hexo主题Yilia</a>
+    </h1>
+  
+
+        
+        <a href="/2014/08/31/cao-hexo-2/" class="archive-article-date">
+  	<time datetime="2014-08-31T08:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">hexo-theme-yilia</a> 是为 <a href="https://github.com/tommy351/hexo" target="_blank" rel="noopener">hexo</a> 2.4+制作的主题。<br>响应式设计，风格简约。</p>
+<p>终于从octopress迁移到hexo。Yilia是自己设计的主题，分享之，有爱请自取。关于主题：</p>
+<ol>
+<li>我喜欢简约。所以标签云，搜索框都拿掉了</li>
+<li>接地气一点。所以用上了jiathis分享，友言评论，以及baidu的cdn</li>
+<li>让大家把注意力放到内容上。这是本主题设计初衷</li>
+<li>主题不支持IE6，7，8。以后也不会</li>
+</ol>
+        
+          <a class="article-more-a" href="/2014/08/31/cao-hexo-2/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">主题</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2014/08/31/cao-hexo-2/">展开全文 >></a>
         </p>
       
 
@@ -353,6 +388,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">主题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
