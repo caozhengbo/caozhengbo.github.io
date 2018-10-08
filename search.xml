@@ -4,10 +4,32 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="/2018/09/30/hello-world/"/>
-      <url>/2018/09/30/hello-world/</url>
+      <link href="/2018/10/08/%E5%A4%87%E7%94%A8/cao/"/>
+      <url>/2018/10/08/%E5%A4%87%E7%94%A8/cao/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>## </p><ol><li>hexo</li><li>hexo</li><li>hexo</li><li>hexo</li><li>hexo</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
+      <title>hexo</title>
+      <link href="/2018/10/08/caozhengbo-BK/"/>
+      <url>/2018/10/08/caozhengbo-BK/</url>
+      
+        <content type="html"><![CDATA[<h3 id="第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈"><a href="#第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈" class="headerlink" title="第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈"></a>第一次发博客，微微有些，激动，我也是才搭建号博客，那就讲一下hexo搭建博客，相信小白跟小白更能互相了解，哈哈</h3><p>我相信有好多人都会卡在安装hexo这里把</p><h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><ul><li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官方下载地址</a></li></ul><h4 id="设置npm淘宝镜像"><a href="#设置npm淘宝镜像" class="headerlink" title="设置npm淘宝镜像"></a>设置npm淘宝镜像</h4><p>npm config set registry “<a href="https://registry.npm.taobao.org&quot;" target="_blank" rel="noopener">https://registry.npm.taobao.org&quot;</a></p><h4 id="创建博客库"><a href="#创建博客库" class="headerlink" title="创建博客库"></a>创建博客库</h4><ul><li>注意，仓库名应该为：用户名.github.io。比如，我的仓库名是：<strong>xuezhisd.github.io</strong>。</li></ul><h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><ul><li><a href="https://git-scm.com/downloads/" target="_blank" rel="noopener">git下载地址</a></li></ul><h4 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h4><ul><li><p>打开git bash终端。</p></li><li><p>设置user.name和user.email。</p><p>git config –global user.name “你的GitHub用户名”<br>git config –global user.email “你的GitHub注册邮箱”</p></li><li><p>生成ssh密匙</p><p>ssh-keygen -t rsa -C “你的GitHub注册邮箱”</p></li><li><p><strong>此时，在用户文件夹下就会有一个新的文件夹.ssh，里面有刚刚创建的ssh密钥文件id_rsa和id_rsa.pub。</strong></p></li></ul><h3 id="开始安装hexo咯。。。"><a href="#开始安装hexo咯。。。" class="headerlink" title="开始安装hexo咯。。。"></a>开始安装hexo咯。。。</h3><p>执行以下命令安装hexo</p><p>安装hexo</p><p>npm install hexo-cli g</p><p>初始化博客文件夹</p><p>hexo init blog</p><p>切换到该路径</p><p>cd blog</p><p>安装hexo的扩展插件</p><p>npm install</p><p>安装其它插件</p><p>npm install hexo-server –save<br>npm install hexo-admin –save<br>npm install hexo-generator-archive –save<br>npm install hexo-generator-feed –save<br>npm install hexo-generator-search –save<br>npm install hexo-generator-tag –save<br>npm install hexo-deployer-git –save<br>npm install hexo-generator-sitemap –save</p><p>（具体安装这些是干嘛用的小编也不清楚，反正安装就对了）</p><p>安装好了可以先测试一下，hexo是否安装成功了（我就在这卡了许久。。。下面我会把我的错误也给大家分享）</p><p>测试一下：hexo -v</p><p><img src="C:\Users\Refueling\Desktop\20181008095014.png" alt="">这便是安装成功了</p><p>如果你的hexo报错了。提示：‘hexo’不是内部或外部命令，也不是可运行的程序或批处理文件。</p><p>（八成是也是和我同样的错了，应该小白大概都会遇到的错把！！！）</p><p>1首先配置一下hexo的环境变量</p><p><img src="C:\Users\Refueling\Desktop\20181008095709.png" alt=""></p><p>这是我的路径，你也去找一下你的配置一下</p><p>因为默认的找不到你的hexo.cmd文件</p><p>下面就OK 啦。你的是否出现了所期望的呢</p><h2 id="初探hexo"><a href="#初探hexo" class="headerlink" title="初探hexo"></a>初探hexo</h2><ul><li><p>第一次使用hexo，在本地创建服务器使用。</p><p>生成静态页面</p><p>hexo generate</p><p>开启本地服务器</p><p>hexo s</p></li><li><p>打开浏览器，地址栏中输入：<strong><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></strong>,应该可以看见刚刚创建的博客了。</p></li></ul><p>本人邮箱：<a href="mailto:RefuelingBo@outlook.com" target="_blank" rel="noopener">RefuelingBo@outlook.com</a></p><p>有问题我们可以私聊，共同进步</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2018/09/30/%E5%A4%87%E7%94%A8/hello-world/"/>
+      <url>/2018/09/30/%E5%A4%87%E7%94%A8/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2>]]></content>
       
       
       
