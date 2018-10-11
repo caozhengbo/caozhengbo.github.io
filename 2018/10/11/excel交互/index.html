@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>excel交互 | 波波的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="上节作业答案 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import xlrdimport xlwtfrom xlutils.copy import copy# 新建excel文件def new_tables():    workbook = xlwt.Workboo">
+  <meta name="description" content="上节作业答案参考 利用xlrd、xlwt、xlutils这三个库组合操作  xlrd：用来读excel文件，但是只读，不能写 xlwt：用来写excel文件，但是只写，不能更改已存在的excel中的数据 xlutils：是将xlrd读入的excel文件copy一份，成为xlwt的对象，这样copy的那一份就可以写入了，直接write已经存在的单元格，就是修改，修改完成后保存为和原来的一样的文件名，">
 <meta name="keywords" content="execel,code">
 <meta property="og:type" content="article">
 <meta property="og:title" content="excel交互">
 <meta property="og:url" content="http://yoursite.com/2018/10/11/excel交互/index.html">
 <meta property="og:site_name" content="波波的博客">
-<meta property="og:description" content="上节作业答案 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import xlrdimport xlwtfrom xlutils.copy import copy# 新建excel文件def new_tables():    workbook = xlwt.Workboo">
+<meta property="og:description" content="上节作业答案参考 利用xlrd、xlwt、xlutils这三个库组合操作  xlrd：用来读excel文件，但是只读，不能写 xlwt：用来写excel文件，但是只写，不能更改已存在的excel中的数据 xlutils：是将xlrd读入的excel文件copy一份，成为xlwt的对象，这样copy的那一份就可以写入了，直接write已经存在的单元格，就是修改，修改完成后保存为和原来的一样的文件名，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-11T04:46:30.338Z">
+<meta property="og:updated_time" content="2018-10-11T09:23:59.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="excel交互">
-<meta name="twitter:description" content="上节作业答案 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import xlrdimport xlwtfrom xlutils.copy import copy# 新建excel文件def new_tables():    workbook = xlwt.Workboo">
+<meta name="twitter:description" content="上节作业答案参考 利用xlrd、xlwt、xlutils这三个库组合操作  xlrd：用来读excel文件，但是只读，不能写 xlwt：用来写excel文件，但是只写，不能更改已存在的excel中的数据 xlutils：是将xlrd读入的excel文件copy一份，成为xlwt的对象，这样copy的那一份就可以写入了，直接write已经存在的单元格，就是修改，修改完成后保存为和原来的一样的文件名，">
   
     <link rel="alternative" href="/atom.xml" title="波波的博客" type="application/atom+xml">
   
@@ -175,8 +175,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.caozhengbo.xyz//2018/10/11/selenium与excel交互/" target="_blank" rel="noopener">上节作业答案</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">import xlrd</span><br><span class="line">import xlwt</span><br><span class="line">from xlutils.copy import copy</span><br><span class="line"># 新建excel文件</span><br><span class="line">def new_tables():</span><br><span class="line">    workbook = xlwt.Workbook()</span><br><span class="line">    # 创建三个表</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet1&apos;)</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet2&apos;)</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet3&apos;)</span><br><span class="line">    # 保存到caozhengbo.xls</span><br><span class="line">    workbook.save(&quot;test.xls&quot;)</span><br><span class="line">def modification():</span><br><span class="line">    # xlutils用于复制excel</span><br><span class="line">    # 本脚本对已经存在的excel表格进行修改</span><br><span class="line">    workbook = xlrd.open_workbook(&quot;test.xls&quot;, formatting_info=True)  # formatting_info复制单元格格式</span><br><span class="line">    # wb = copy(workbook)</span><br><span class="line">    # 获取所有sheet</span><br><span class="line">    print(workbook.sheet_names())</span><br><span class="line">    wb = copy(workbook)</span><br><span class="line">    # i=1</span><br><span class="line">    for i in range(0,6):</span><br><span class="line">        for x in range(0,3):</span><br><span class="line">            # 插入数据</span><br><span class="line">            wb.get_sheet(x).write(0,i, &quot;张三%d&quot;%i)</span><br><span class="line">            wb.get_sheet(x).write(1,i, &quot;李四%d&quot;%i)</span><br><span class="line">            wb.get_sheet(x).write(2,i, &quot;王五%d&quot;%i)</span><br><span class="line">    wb.save(&quot;test.xls&quot;)  # 同名存盘</span><br><span class="line"># 读取excel文件内容并且输出</span><br><span class="line">def read():</span><br><span class="line">    workbook = xlrd.open_workbook(&apos;test.xls&apos;)</span><br><span class="line">    # 获取表数据的行、列数</span><br><span class="line">    for i in range(0,3):</span><br><span class="line">        table = workbook.sheet_by_index(i)</span><br><span class="line">        h = table.nrows</span><br><span class="line">        l = table.ncols</span><br><span class="line">        print(u&quot;表%s数据的行数为%s,列数为%s&quot;% (i+1,h, l))</span><br><span class="line">        # 循环读取数据</span><br><span class="line">        for i in range(0, h):</span><br><span class="line">            rowValues = table.row_values(i)  # 按行读取数据</span><br><span class="line">            # 输出读取的数据</span><br><span class="line">            for data in rowValues:</span><br><span class="line">                print(data,end=&apos;  &apos;)</span><br><span class="line">            print()</span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    new_tables()</span><br><span class="line">    modification()</span><br><span class="line">    read()</span><br></pre></td></tr></table></figure>
+        <p><a href="http://www.caozhengbo.xyz//2018/10/11/selenium与excel交互/" target="_blank" rel="noopener">上节作业答案参考</a></p>
+<p><strong>利用xlrd、xlwt、xlutils这三个库组合操作</strong></p>
+<ul>
+<li><strong>xlrd</strong>：用来读excel文件，但是只读，不能写</li>
+<li><strong>xlwt</strong>：用来写excel文件，但是只写，不能更改已存在的excel中的数据</li>
+<li><strong>xlutils</strong>：是将xlrd读入的excel文件copy一份，成为xlwt的对象，这样copy的那一份就可以写入了，直接write已经存在的单元格，就是修改，修改完成后保存为和原来的一样的文件名，就会覆盖原excel文件，这样就完成了excel文件的修改</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import xlrd</span><br><span class="line">import xlwt</span><br><span class="line">from xlutils.copy import copy</span><br><span class="line"></span><br><span class="line"># 新建excel文件</span><br><span class="line">def new_tables():</span><br><span class="line">    workbook = xlwt.Workbook()</span><br><span class="line">    # 创建三个表</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet1&apos;)</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet2&apos;)</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet3&apos;)</span><br><span class="line">    # 保存到caozhengbo.xls</span><br><span class="line">    workbook.save(&quot;test.xls&quot;)</span><br><span class="line">def modification():</span><br><span class="line">    # xlutils用于复制excel</span><br><span class="line">    # 本脚本对已经存在的excel表格进行修改</span><br><span class="line">    workbook = xlrd.open_workbook(&quot;test.xls&quot;, formatting_info=True)  # formatting_info复制单元格格式</span><br><span class="line">    # wb = copy(workbook)</span><br><span class="line">    # 获取所有sheet</span><br><span class="line">    print(workbook.sheet_names())</span><br><span class="line">    wb = copy(workbook)</span><br><span class="line">    # i=1</span><br><span class="line">    for i in range(0,6):</span><br><span class="line">        for x in range(0,3):</span><br><span class="line">            # 插入数据</span><br><span class="line">            wb.get_sheet(x).write(0,i, &quot;张三%d&quot;%i)</span><br><span class="line">            wb.get_sheet(x).write(1,i, &quot;李四%d&quot;%i)</span><br><span class="line">            wb.get_sheet(x).write(2,i, &quot;王五%d&quot;%i)</span><br><span class="line">    wb.save(&quot;test.xls&quot;)  # 同名存盘</span><br><span class="line"># 读取excel文件内容并且输出</span><br><span class="line">def read():</span><br><span class="line">    workbook = xlrd.open_workbook(&apos;test.xls&apos;)</span><br><span class="line">    # 获取表数据的行、列数</span><br><span class="line">    for i in range(0,3):</span><br><span class="line">        table = workbook.sheet_by_index(i)</span><br><span class="line">        h = table.nrows</span><br><span class="line">        l = table.ncols</span><br><span class="line">        print(u&quot;表%s数据的行数为%s,列数为%s&quot;% (i+1,h, l))</span><br><span class="line">        # 循环读取数据</span><br><span class="line">        for i in range(0, h):</span><br><span class="line">            rowValues = table.row_values(i)  # 按行读取数据</span><br><span class="line">            # 输出读取的数据</span><br><span class="line">            for data in rowValues:</span><br><span class="line">                print(data,end=&apos;  &apos;)</span><br><span class="line">            print()</span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    new_tables()</span><br><span class="line">    modification()</span><br><span class="line">    read()</span><br></pre></td></tr></table></figure>
 <p>不足之处，还请评论批评</p>
 
       
@@ -518,6 +525,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">execel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenium</a>
               </li>
              
@@ -534,15 +549,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">游戏</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旧事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,14 +570,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">美景</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">execel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">code</a>
               </li>
             
             <div class="clearfix"></div>
