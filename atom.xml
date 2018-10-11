@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-11T00:51:26.984Z</updated>
+  <updated>2018-10-11T04:46:30.338Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>excel交互</title>
+    <link href="http://yoursite.com/2018/10/11/excel%E4%BA%A4%E4%BA%92/"/>
+    <id>http://yoursite.com/2018/10/11/excel交互/</id>
+    <published>2018-10-11T04:42:32.000Z</published>
+    <updated>2018-10-11T04:46:30.338Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.caozhengbo.xyz//2018/10/11/selenium与excel交互/" target="_blank" rel="noopener">上节作业答案</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">import xlrd</span><br><span class="line">import xlwt</span><br><span class="line">from xlutils.copy import copy</span><br><span class="line"># 新建excel文件</span><br><span class="line">def new_tables():</span><br><span class="line">    workbook = xlwt.Workbook()</span><br><span class="line">    # 创建三个表</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet1&apos;)</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet2&apos;)</span><br><span class="line">    sheet = workbook.add_sheet(&apos;Sheet3&apos;)</span><br><span class="line">    # 保存到caozhengbo.xls</span><br><span class="line">    workbook.save(&quot;test.xls&quot;)</span><br><span class="line">def modification():</span><br><span class="line">    # xlutils用于复制excel</span><br><span class="line">    # 本脚本对已经存在的excel表格进行修改</span><br><span class="line">    workbook = xlrd.open_workbook(&quot;test.xls&quot;, formatting_info=True)  # formatting_info复制单元格格式</span><br><span class="line">    # wb = copy(workbook)</span><br><span class="line">    # 获取所有sheet</span><br><span class="line">    print(workbook.sheet_names())</span><br><span class="line">    wb = copy(workbook)</span><br><span class="line">    # i=1</span><br><span class="line">    for i in range(0,6):</span><br><span class="line">        for x in range(0,3):</span><br><span class="line">            # 插入数据</span><br><span class="line">            wb.get_sheet(x).write(0,i, &quot;张三%d&quot;%i)</span><br><span class="line">            wb.get_sheet(x).write(1,i, &quot;李四%d&quot;%i)</span><br><span class="line">            wb.get_sheet(x).write(2,i, &quot;王五%d&quot;%i)</span><br><span class="line">    wb.save(&quot;test.xls&quot;)  # 同名存盘</span><br><span class="line"># 读取excel文件内容并且输出</span><br><span class="line">def read():</span><br><span class="line">    workbook = xlrd.open_workbook(&apos;test.xls&apos;)</span><br><span class="line">    # 获取表数据的行、列数</span><br><span class="line">    for i in range(0,3):</span><br><span class="line">        table = workbook.sheet_by_index(i)</span><br><span class="line">        h = table.nrows</span><br><span class="line">        l = table.ncols</span><br><span class="line">        print(u&quot;表%s数据的行数为%s,列数为%s&quot;% (i+1,h, l))</span><br><span class="line">        # 循环读取数据</span><br><span class="line">        for i in range(0, h):</span><br><span class="line">            rowValues = table.row_values(i)  # 按行读取数据</span><br><span class="line">            # 输出读取的数据</span><br><span class="line">            for data in rowValues:</span><br><span class="line">                print(data,end=&apos;  &apos;)</span><br><span class="line">            print()</span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    new_tables()</span><br><span class="line">    modification()</span><br><span class="line">    read()</span><br></pre></td></tr></table></figure><p>不足之处，还请评论批评</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.caozhengbo.xyz//2018/10/11/selenium与excel交互/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;上节作业答案&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight 
+      
+    
+    </summary>
+    
+    
+      <category term="execel" scheme="http://yoursite.com/tags/execel/"/>
+    
+      <category term="code" scheme="http://yoursite.com/tags/code/"/>
+    
+  </entry>
   
   <entry>
     <title>selenium与excel交互</title>
@@ -39,28 +65,6 @@
   </entry>
   
   <entry>
-    <title>多台电脑操作hexo</title>
-    <link href="http://yoursite.com/2018/10/10/%E5%A4%9A%E5%8F%B0%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9Chexo/"/>
-    <id>http://yoursite.com/2018/10/10/多台电脑操作hexo/</id>
-    <published>2018-10-09T16:00:00.000Z</published>
-    <updated>2018-10-10T03:27:01.833Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="多台电脑操作hexo个人网站"><a href="#多台电脑操作hexo个人网站" class="headerlink" title="多台电脑操作hexo个人网站"></a>多台电脑操作hexo个人网站</h1><h2 id="旧电脑上的操作"><a href="#旧电脑上的操作" class="headerlink" title="旧电脑上的操作"></a>旧电脑上的操作</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示：<a href="https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="image"></a></p><a id="more"></a><h3 id="对username-github-io仓库新建hexo分支，并克隆"><a href="#对username-github-io仓库新建hexo分支，并克隆" class="headerlink" title="对username.github.io仓库新建hexo分支，并克隆"></a>对username.github.io仓库新建hexo分支，并克隆</h3><p>在Github的username.github.io（就是hexo网站的仓库）仓库上新建一个xxx（自己取名，我取名为hexo）分支，并切换到该分支，并在该仓库-&gt;Settings-&gt;Branches-&gt;Default branch中将默认分支设为xxx，save保存。</p><p>新建分支，并选中新建的分支，如下图：</p><p><a href="https://upload-images.jianshu.io/upload_images/2859254-01cb597e80e5005b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/2859254-01cb597e80e5005b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="image"></a></p><p>设置新建的xxx分支为默认分支，如下图：</p><p><a href="https://upload-images.jianshu.io/upload_images/2859254-67ed8c22531dd66d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/2859254-67ed8c22531dd66d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="image"></a></p><p>然后将该仓库克隆到本地，进入到本地的username.github.io文件目录。<br>进入本地的username.github.io后，在当前目录使用git bash执行git branch命令查看当前所在分支，应为新建的分支xxx。</p><h3 id="将本地博客的部署文件拷贝进username-github-io文件目录"><a href="#将本地博客的部署文件拷贝进username-github-io文件目录" class="headerlink" title="将本地博客的部署文件拷贝进username.github.io文件目录"></a>将本地博客的部署文件拷贝进username.github.io文件目录</h3><p>先将本地博客的部署文件（就是之前存放hexo项目的目录下的全部文件）全部拷贝进username.github.io文件目录中去。</p><p>接下来，进入username.github.io文件目录下，依次执行：</p><ol><li><strong>git add .</strong></li><li><strong>git commit -m ‘新电脑部署’</strong>（引号内容可改）</li><li><strong>git push</strong></li></ol><p>即可将博客的hexo部署环境提交到GitHub个人仓库的xxx分支。</p><p>此时部署到github的步骤就已经完成了。master分支和xxx分支各自保存着一个版本，master分支用于保存博客静态资源，提供博客页面供人访问；xxx分支用于备份博客部署文件，供自己修改和更新，两者在一个GitHub仓库内互不冲突，完美！</p><h2 id="新电脑上的操作"><a href="#新电脑上的操作" class="headerlink" title="新电脑上的操作"></a>新电脑上的操作</h2><p>到这一步，你的博客已经可以在其他电脑上进行同步的维护和更新了，方法很简单：</p><ol><li><p>将新电脑生成的ssh key添加到GitHub账户上（生成并添加ssh key的方法自行百度，本文不做详细说明）。</p></li><li><p>在新电脑上克隆username.github.io仓库的xxx分支到本地，此时本地git仓库处于xxx分支.可以使用git branch查看当前分支。</p></li><li><p>切换到username.github.io目录，执行npm install(由于仓库有一个.gitignore文件，里面默认是忽略掉node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录，所以需要install下)</p></li><li><p>在新电脑上安装hexo命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li></ol><h2 id="新旧电脑更新网站的方法"><a href="#新旧电脑更新网站的方法" class="headerlink" title="新旧电脑更新网站的方法"></a>新旧电脑更新网站的方法</h2><p>首先注意一点：每次换电脑进行博客更新时，不管上次在其他电脑有没有更新，最好先git pull，防止冲突，这是一个好习惯。<br>然后，依次执行以下步骤：</p><ol><li>编辑、撰写文章或其他博客更新改动，就是你要对博客进行的修改，或新增文章。</li><li>依次执行git add .、git commit -m ‘在新电脑上提交新文章’（引号内容可改）、git push指令，保证xxx分支版本为最新版本。</li><li>依次执行hexo g,hexo d指令（执行之后，过几分钟如果网站上的内容没有更新，在hexo g之前，可能需要执行hexo clean），完成后就会发现，最新改动已经更新到master分支了，两个分支互不干扰！</li></ol><p>到此，就可以在多台电脑上更新个人网站啦！如有疑问，欢迎留言！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;多台电脑操作hexo个人网站&quot;&gt;&lt;a href=&quot;#多台电脑操作hexo个人网站&quot; class=&quot;headerlink&quot; title=&quot;多台电脑操作hexo个人网站&quot;&gt;&lt;/a&gt;多台电脑操作hexo个人网站&lt;/h1&gt;&lt;h2 id=&quot;旧电脑上的操作&quot;&gt;&lt;a href=&quot;#旧电脑上的操作&quot; class=&quot;headerlink&quot; title=&quot;旧电脑上的操作&quot;&gt;&lt;/a&gt;旧电脑上的操作&lt;/h2&gt;&lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h3&gt;&lt;p&gt;首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示：&lt;a href=&quot;https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="个人博客" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
     <title>清晨</title>
     <link href="http://yoursite.com/2018/10/10/wangyiyun/"/>
     <id>http://yoursite.com/2018/10/10/wangyiyun/</id>
@@ -80,6 +84,28 @@
     
     
       <category term="网易云" scheme="http://yoursite.com/tags/%E7%BD%91%E6%98%93%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多台电脑操作hexo</title>
+    <link href="http://yoursite.com/2018/10/10/%E5%A4%9A%E5%8F%B0%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9Chexo/"/>
+    <id>http://yoursite.com/2018/10/10/多台电脑操作hexo/</id>
+    <published>2018-10-09T16:00:00.000Z</published>
+    <updated>2018-10-11T04:40:53.753Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="多台电脑操作hexo个人网站"><a href="#多台电脑操作hexo个人网站" class="headerlink" title="多台电脑操作hexo个人网站"></a>多台电脑操作hexo个人网站</h1><h2 id="旧电脑上的操作"><a href="#旧电脑上的操作" class="headerlink" title="旧电脑上的操作"></a>旧电脑上的操作</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示：<a href="https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="image"></a></p><a id="more"></a><h3 id="对username-github-io仓库新建hexo分支，并克隆"><a href="#对username-github-io仓库新建hexo分支，并克隆" class="headerlink" title="对username.github.io仓库新建hexo分支，并克隆"></a>对username.github.io仓库新建hexo分支，并克隆</h3><p>在Github的username.github.io（就是hexo网站的仓库）仓库上新建一个xxx（自己取名，我取名为hexo）分支，并切换到该分支，并在该仓库-&gt;Settings-&gt;Branches-&gt;Default branch中将默认分支设为xxx，save保存。</p><p>新建分支，并选中新建的分支，如下图：</p><p><a href="https://upload-images.jianshu.io/upload_images/2859254-01cb597e80e5005b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/2859254-01cb597e80e5005b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="image"></a></p><p>设置新建的xxx分支为默认分支，如下图：</p><p><a href="https://upload-images.jianshu.io/upload_images/2859254-67ed8c22531dd66d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/2859254-67ed8c22531dd66d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="image"></a></p><p>然后将该仓库克隆到本地，进入到本地的username.github.io文件目录。<br>进入本地的username.github.io后，在当前目录使用git bash执行git branch命令查看当前所在分支，应为新建的分支xxx。</p><h3 id="将本地博客的部署文件拷贝进username-github-io文件目录"><a href="#将本地博客的部署文件拷贝进username-github-io文件目录" class="headerlink" title="将本地博客的部署文件拷贝进username.github.io文件目录"></a>将本地博客的部署文件拷贝进username.github.io文件目录</h3><p>先将本地博客的部署文件（就是之前存放hexo项目的目录下的全部文件）全部拷贝进username.github.io文件目录中去。</p><p>接下来，进入username.github.io文件目录下，依次执行：</p><ol><li><strong>git add .</strong></li><li><strong>git commit -m ‘新电脑部署’</strong>（引号内容可改）</li><li><strong>git push</strong></li></ol><p>即可将博客的hexo部署环境提交到GitHub个人仓库的xxx分支。</p><p>此时部署到github的步骤就已经完成了。master分支和xxx分支各自保存着一个版本，master分支用于保存博客静态资源，提供博客页面供人访问；xxx分支用于备份博客部署文件，供自己修改和更新，两者在一个GitHub仓库内互不冲突，完美！</p><h2 id="新电脑上的操作"><a href="#新电脑上的操作" class="headerlink" title="新电脑上的操作"></a>新电脑上的操作</h2><p>到这一步，你的博客已经可以在其他电脑上进行同步的维护和更新了，方法很简单：</p><ol><li><p>将新电脑生成的ssh key添加到GitHub账户上（生成并添加ssh key的方法自行百度，本文不做详细说明）。</p></li><li><p>在新电脑上克隆username.github.io仓库的xxx分支到本地，此时本地git仓库处于xxx分支.可以使用git branch查看当前分支。</p></li><li><p>切换到username.github.io目录，执行npm install(由于仓库有一个.gitignore文件，里面默认是忽略掉node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录，所以需要install下)</p></li><li><p>在新电脑上安装hexo命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li></ol><h2 id="新旧电脑更新网站的方法"><a href="#新旧电脑更新网站的方法" class="headerlink" title="新旧电脑更新网站的方法"></a>新旧电脑更新网站的方法</h2><p>首先注意一点：每次换电脑进行博客更新时，不管上次在其他电脑有没有更新，最好先git pull，防止冲突，这是一个好习惯。<br>然后，依次执行以下步骤：</p><ol><li>编辑、撰写文章或其他博客更新改动，就是你要对博客进行的修改，或新增文章。</li><li>依次执行git add .、git commit -m ‘在新电脑上提交新文章’（引号内容可改）、git push指令，保证xxx分支版本为最新版本。</li><li>依次执行hexo g,hexo d指令（执行之后，过几分钟如果网站上的内容没有更新，在hexo g之前，可能需要执行hexo clean），完成后就会发现，最新改动已经更新到master分支了，两个分支互不干扰！</li></ol><p>到此，就可以在多台电脑上更新个人网站啦！如有疑问，欢迎留言！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;多台电脑操作hexo个人网站&quot;&gt;&lt;a href=&quot;#多台电脑操作hexo个人网站&quot; class=&quot;headerlink&quot; title=&quot;多台电脑操作hexo个人网站&quot;&gt;&lt;/a&gt;多台电脑操作hexo个人网站&lt;/h1&gt;&lt;h2 id=&quot;旧电脑上的操作&quot;&gt;&lt;a href=&quot;#旧电脑上的操作&quot; class=&quot;headerlink&quot; title=&quot;旧电脑上的操作&quot;&gt;&lt;/a&gt;旧电脑上的操作&lt;/h2&gt;&lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h3&gt;&lt;p&gt;首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示：&lt;a href=&quot;https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/2859254-e60e6b7e367b36fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="个人博客" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
