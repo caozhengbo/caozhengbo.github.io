@@ -23,23 +23,23 @@
         border-left-color: #6d6d6d;    /*左边框颜色*/
     }
   </style>
-  <meta name="description" content="pyunit中文版 ——基于python3.6.6rc1 1. unittest框架unittest的设计灵感最初来源于Junit以及其他语言中具有共同特征的单元框架。它支持自动化测试，在测试中使用setup（初始化）和shutdown（关闭销毁）操作，组织测试用例为套件（批量运行），以及把测试和报告独立开来。 为了实现这些，unittest以一种面向对象的方式产生了一些很重要的概念：  test">
+  <meta name="description" content="pyunit中文版 ——基于python3.6.6rc1 1. unittest框架unittest的设计灵感最初来源于Junit以及其他语言中具有共同特征的单元框架。它支持自动化测试，在测试中使用setup（初始化）和shutdown（关闭销毁）操作，组织测试用例为套件（批量运行），以及把测试和报告独立开来。 为了实现这些，unittest以一种面向对象的方式产生了一些很重要的概念：">
 <meta name="keywords" content="单元测试,unittest">
 <meta property="og:type" content="article">
 <meta property="og:title" content="中文版unittest官方文档">
 <meta property="og:url" content="http://yoursite.com/2018/10/17/中文版unittest官方文档/index.html">
 <meta property="og:site_name" content="波波的博客">
-<meta property="og:description" content="pyunit中文版 ——基于python3.6.6rc1 1. unittest框架unittest的设计灵感最初来源于Junit以及其他语言中具有共同特征的单元框架。它支持自动化测试，在测试中使用setup（初始化）和shutdown（关闭销毁）操作，组织测试用例为套件（批量运行），以及把测试和报告独立开来。 为了实现这些，unittest以一种面向对象的方式产生了一些很重要的概念：  test">
+<meta property="og:description" content="pyunit中文版 ——基于python3.6.6rc1 1. unittest框架unittest的设计灵感最初来源于Junit以及其他语言中具有共同特征的单元框架。它支持自动化测试，在测试中使用setup（初始化）和shutdown（关闭销毁）操作，组织测试用例为套件（批量运行），以及把测试和报告独立开来。 为了实现这些，unittest以一种面向对象的方式产生了一些很重要的概念：">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://img-blog.csdn.net/20180711093432724?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xqbDYxNTg5OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180711093452522?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xqbDYxNTg5OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180711094232311?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xqbDYxNTg5OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180711094308800?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xqbDYxNTg5OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180711094355887?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xqbDYxNTg5OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2018-10-17T02:07:14.068Z">
+<meta property="og:updated_time" content="2018-10-18T09:23:20.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="中文版unittest官方文档">
-<meta name="twitter:description" content="pyunit中文版 ——基于python3.6.6rc1 1. unittest框架unittest的设计灵感最初来源于Junit以及其他语言中具有共同特征的单元框架。它支持自动化测试，在测试中使用setup（初始化）和shutdown（关闭销毁）操作，组织测试用例为套件（批量运行），以及把测试和报告独立开来。 为了实现这些，unittest以一种面向对象的方式产生了一些很重要的概念：  test">
+<meta name="twitter:description" content="pyunit中文版 ——基于python3.6.6rc1 1. unittest框架unittest的设计灵感最初来源于Junit以及其他语言中具有共同特征的单元框架。它支持自动化测试，在测试中使用setup（初始化）和shutdown（关闭销毁）操作，组织测试用例为套件（批量运行），以及把测试和报告独立开来。 为了实现这些，unittest以一种面向对象的方式产生了一些很重要的概念：">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20180711093432724?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xqbDYxNTg5OTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
   
     <link rel="alternative" href="/atom.xml" title="波波的博客" type="application/atom+xml">
@@ -200,6 +200,7 @@
 <p>——基于python3.6.6rc1</p>
 <h2 id="1-unittest框架"><a href="#1-unittest框架" class="headerlink" title="1. unittest框架"></a><strong>1. unittest框架</strong></h2><p>unittest的设计灵感最初来源于Junit以及其他语言中具有共同特征的单元框架。它支持自动化测试，在测试中使用setup（初始化）和shutdown（关闭销毁）操作，组织测试用例为套件（批量运行），以及把测试和报告独立开来。</p>
 <p>为了实现这些，unittest以一种面向对象的方式产生了一些很重要的概念：</p>
+<a id="more"></a>
 <ul>
 <li>test fixture</li>
 </ul>
@@ -1034,14 +1035,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">html5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">设计</a>
               </li>
              
@@ -1050,7 +1043,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">coffeescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">html5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1058,11 +1055,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+                <a href="javascript:void(0)" class="js-tag color3">coffeescript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1074,19 +1067,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网易云</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">selenium</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人博客</a>
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1098,11 +1083,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+                <a href="javascript:void(0)" class="js-tag color4">selenium</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" class="js-tag color1">excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">网易云</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1111,6 +1108,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旧事</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
