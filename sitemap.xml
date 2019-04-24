@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/10/17/%E4%B8%AD%E6%96%87%E7%89%88unittest%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/</loc>
+    
+    <lastmod>2018-10-17T13:22:04.202Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/10/15/%E6%B2%99%E6%BC%A0%E9%AA%86%E9%A9%BC/</loc>
     
     <lastmod>2018-10-15T11:20:47.284Z</lastmod>
@@ -93,14 +100,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/assets/demo/jiugongge_demo2.html</loc>
+    <loc>http://yoursite.com/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2018-10-10T05:32:28.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/assets/demo/jiugongge_demo.html</loc>
+    <loc>http://yoursite.com/assets/demo/jiugongge_demo2.html</loc>
     
     <lastmod>2018-10-10T05:32:28.897Z</lastmod>
     
@@ -135,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2012/12/31/css3-animater/</loc>
+    <loc>http://yoursite.com/2012/12/14/css-jiugongge/</loc>
     
     <lastmod>2018-10-10T05:32:28.742Z</lastmod>
     
@@ -149,21 +156,21 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2012/12/14/css-jiugongge/</loc>
+    <loc>http://yoursite.com/2012/12/31/css3-animater/</loc>
     
     <lastmod>2018-10-10T05:32:28.742Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2012/12/24/coffee-pc/</loc>
+    <loc>http://yoursite.com/2013/08/11/brief-oauth/</loc>
     
     <lastmod>2018-10-10T05:32:28.741Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2013/08/11/brief-oauth/</loc>
+    <loc>http://yoursite.com/2012/12/24/coffee-pc/</loc>
     
     <lastmod>2018-10-10T05:32:28.741Z</lastmod>
     
@@ -177,7 +184,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2012/12/18/assassins-creed/</loc>
+    <loc>http://yoursite.com/2012/12/19/a-chrismas-ico/</loc>
     
     <lastmod>2018-10-10T05:32:28.739Z</lastmod>
     
@@ -191,7 +198,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2012/12/19/a-chrismas-ico/</loc>
+    <loc>http://yoursite.com/2012/12/18/assassins-creed/</loc>
     
     <lastmod>2018-10-10T05:32:28.739Z</lastmod>
     
